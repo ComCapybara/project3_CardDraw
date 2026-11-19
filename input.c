@@ -1,20 +1,31 @@
 #include <stdio.h>
 
 int main() {
-	char op;
-	float val = 0;
+	char op = 0;
+	float val = 0.0;
 	while(1){
-		int usrInput = scanf(" %c %f", &op, &val);
-		if(usrInput == EOF) break;
-		switch (op) {
-		case 97: // a
+		scanf("%c %f", &op, &val);
+		// if(usrInput == EOF) break;
+		switch ((char)op) {
+		case 'a': // a
 			val += val;
-		case 115: // s
+			printf("%f\n", val);
+			break;
+		case 's': // s
 			val -= val;
-		case 109: // m
+			printf("%f\n", val);
+			break;
+		case 'm': // m
 			val *= val;
-		case 100: // d
+			printf("%f\n", val);
+			break;
+		case 'd': // d
 			val /= val;
+			printf("%f\n", val);
+			break;
+		default:
+			break;
 		}
 	}
+	return 0;
 }
