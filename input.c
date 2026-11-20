@@ -4,7 +4,8 @@ int main() {
 	char op;
 	float val = 0.0;
 	float score = 0.0;
-	while(1){
+	int i = 0;
+	while (i <= 10000) {
 		scanf("%c %f", &op, &val);
 		// if(usrInput == EOF) break;
 		switch (op) {
@@ -27,6 +28,7 @@ int main() {
 		default:
 			break;
 		}
+		i++;
 	}
 	return 0;
 }
