@@ -48,6 +48,10 @@ int main() {
 					chararr = realloc(chararr, (sizeof(char) * arrsize * 2));
 					fltarr = realloc(fltarr, (sizeof(float) * arrsize * 2));
 					arrsize *= 2;
+					for (int i = index+1; i < arrsize; i++) {
+						chararr[i] = 0;
+						fltarr[i] = 0.0;
+					}
 				}
 				chararr[index] = op;
 				fltarr[index] = val;
